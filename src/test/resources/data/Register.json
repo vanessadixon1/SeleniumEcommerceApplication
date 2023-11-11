@@ -1,0 +1,15 @@
+{
+  "RegisterData": [
+    {
+      "firstName": "John",
+      "lastName": "Flow",
+      "email": "testing@amcsoftware.org",
+      "phoneNumber": "770-552-9999",
+      "occupation": "Engineer",
+      "gender": "Male",
+      "password": "testing@Q",
+      "wrongConfirmPassword": "testing",
+      "formTitle": "Register"
+    }
+  ]
+}
