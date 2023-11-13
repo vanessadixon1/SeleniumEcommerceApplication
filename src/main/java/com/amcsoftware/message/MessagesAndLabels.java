@@ -10,6 +10,10 @@ public class MessagesAndLabels implements IMessages {
     public static String phoneNumber = "Phone Number";
     public static String confirmPassword = "Confirm Password";
     public static String gender = "Gender";
+    public static String emailInputPlaceholder = "email@example.com";
+    public static String phoneInputPlaceHolder = "enter your number";
+    public static String passwordInputPlaceholder = "Passsword";
+    public static String confirmPasswordInputPlaceholder = "Confirm Passsword";
     public static String register = "Register";
     public static String successfulOrder = "Successful Orders";
     public static String customers = "Customers";
@@ -29,6 +33,14 @@ public class MessagesAndLabels implements IMessages {
     private String phoneNumberRequired = "*Phone Number is required";
     private String passwordRequired  = "*Password is required";
     private String confirmPasswordRequired = "Confirm Password is required";
+
+    private String firstNameErrorMessage = "*First Name must be 3 or more character long";
+    private String lastNameErrorMessage = "last Name must be 3 to 20 characters long!";
+    private String emailErrorMessage = "*Enter Valid Email";
+    private String onlyNumbersErrorMessage = "*only numbers is allowed";
+    private String phoneErrorMessage = "*Phone Number must be 10 digit";
+    private String confirmPasswordErrorMessage = "Password and Confirm Password must match with each other.";
+    private String passwordLengthErrorMessage = "Password must be 8 Character Long!";
 
     @Override
     public String firstNameRequiredMessage() {
@@ -53,6 +65,46 @@ public class MessagesAndLabels implements IMessages {
     @Override
     public String passwordConfirmRequiredMessage() {
         return confirmPasswordRequired;
+    }
+
+    @Override
+    public String firstNameErrorMessage() {
+        return firstNameErrorMessage;
+    }
+
+    @Override
+    public String lastNameErrorMessage() {
+        return lastNameErrorMessage;
+    }
+
+    @Override
+    public String passwordLengthErrorMessage() {
+        return passwordLengthErrorMessage;
+    }
+
+    @Override
+    public String phoneNumberErrorMessage() {
+        return phoneErrorMessage;
+    }
+
+    @Override
+    public String onlyNumbersErrorMessage() {
+        return onlyNumbersErrorMessage;
+    }
+
+    @Override
+    public String confirmPasswordErrorMessage() {
+        return confirmPasswordErrorMessage;
+    }
+
+    @Override
+    public String emailErrorMessage() {
+        return emailErrorMessage;
+    }
+
+    @Override
+    public String checkboxErrorMessage() {
+        return null;
     }
 
     @Override

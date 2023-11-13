@@ -10,4 +10,10 @@ public class LoginSmokeTest extends TestBase {
 
     }
 
+    public void verifyBlinkFormBanner() {
+
+    }
+
+
+
 }

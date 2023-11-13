@@ -12,6 +12,22 @@ public interface IMessages {
 
     public String passwordConfirmRequiredMessage();
 
+    public String firstNameErrorMessage();
+
+    public String lastNameErrorMessage();
+
+    public String passwordLengthErrorMessage();
+
+    public String phoneNumberErrorMessage();
+
+    public String onlyNumbersErrorMessage();
+
+    public String confirmPasswordErrorMessage();
+
+    public String emailErrorMessage();
+
+    public String checkboxErrorMessage();
+
     public String bannerMessage();
 
     public String pageFooterTitle();

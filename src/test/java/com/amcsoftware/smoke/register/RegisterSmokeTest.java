@@ -1,11 +1,8 @@
 package com.amcsoftware.smoke.register;
 
-import com.amcsoftware.message.MessagesAndLabels;
-import com.amcsoftware.parameters.jsonDataItem.RegisterDataItem;
+import com.amcsoftware.parameters.init.jsonDataItem.RegisterDataItem;
 import com.amcsoftware.setup.TestBase;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class RegisterSmokeTest extends TestBase {
 
@@ -21,20 +18,23 @@ public class RegisterSmokeTest extends TestBase {
         actions.softAssert.assertAll();
     }
 
-    @Test
-    public void verifyRegisterFormLabelsAndRequiredField() throws InterruptedException {
-       actions.getRegistrationActions().clickRegisterButton();
+    @Test(dataProvider = "getRegisterData")
+    public void verifyRegisterFormLabelsAndRequiredMessages(RegisterDataItem testData) throws Exception {
+        actions.getRegistrationActions().clickRegisterButton();
         actions.getRegistrationActions().validateRegisterFormLabels();
         actions.getRegistrationActions().validateRequiredField();
+        actions.getRegistrationActions().validateAddingAndRemovingData(testData.getFirstName(), testData.getLastName(), testData.getEmail(),
+                testData.getPhoneNumber(), testData.getPassword(), testData.getWrongConfirmPassword());
         actions.softAssert.assertAll();
     }
 
-    public void verifyRegisteredFormRequiredFields() {
-
+    @Test(dataProvider = "getRegisterData")
+    public void verifyRegisteredFormButtonsAndDropdown(RegisterDataItem testData) throws Exception {
+        actions.getRegistrationActions().clickRegisterButton();
+        actions.getRegistrationActions().validateRadioButton();
+        actions.getRegistrationActions().validateDropdownValues(testData.getOptions());
+        actions.softAssert.assertAll();
     }
-
-
-
 
 
 }

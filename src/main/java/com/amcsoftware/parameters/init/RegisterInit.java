@@ -1,7 +1,7 @@
 package com.amcsoftware.parameters.init;
 
-import com.amcsoftware.parameters.jsonDataItem.RegisterDataItem;
-import com.amcsoftware.parameters.jsonDataItem.RegisterDataJson;
+import com.amcsoftware.parameters.init.jsonDataItem.RegisterDataItem;
+import com.amcsoftware.parameters.init.jsonDataItem.RegisterDataJson;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;

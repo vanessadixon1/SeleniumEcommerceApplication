@@ -1,4 +1,4 @@
-package com.amcsoftware.parameters.jsonDataItem;
+package com.amcsoftware.parameters.init.jsonDataItem;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;

@@ -1,5 +1,6 @@
-package com.amcsoftware.parameters.jsonDataItem;
+package com.amcsoftware.parameters.init.jsonDataItem;
 
+import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 public class RegisterDataItem{
@@ -13,6 +14,9 @@ public class RegisterDataItem{
 	@SerializedName("password")
 	private String password;
 
+	@SerializedName("invalidEmailFormat")
+	private String invalidEmailFormat;
+
 	@SerializedName("phoneNumber")
 	private String phoneNumber;
 
@@ -25,8 +29,14 @@ public class RegisterDataItem{
 	@SerializedName("gender")
 	private String gender;
 
+	@SerializedName("options")
+	private List<String> options;
+
 	@SerializedName("formTitle")
 	private String formTitle;
+
+	@SerializedName("shortPassword")
+	private String shortPassword;
 
 	@SerializedName("email")
 	private String email;
@@ -41,6 +51,10 @@ public class RegisterDataItem{
 
 	public String getPassword(){
 		return password;
+	}
+
+	public String getInvalidEmailFormat(){
+		return invalidEmailFormat;
 	}
 
 	public String getPhoneNumber(){
@@ -59,8 +73,16 @@ public class RegisterDataItem{
 		return gender;
 	}
 
+	public List<String> getOptions(){
+		return options;
+	}
+
 	public String getFormTitle(){
 		return formTitle;
+	}
+
+	public String getShortPassword(){
+		return shortPassword;
 	}
 
 	public String getEmail(){

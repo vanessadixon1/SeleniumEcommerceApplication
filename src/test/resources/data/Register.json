@@ -9,7 +9,16 @@
       "gender": "Male",
       "password": "testing@Q",
       "wrongConfirmPassword": "testing",
-      "formTitle": "Register"
+      "shortPassword": "ae",
+      "formTitle": "Register",
+      "options": [
+        "Choose your occupation",
+        "Doctor",
+        "Student",
+        "Engineer",
+        "Scientist"
+      ],
+      "invalidEmailFormat": "testing@"
     }
   ]
 }

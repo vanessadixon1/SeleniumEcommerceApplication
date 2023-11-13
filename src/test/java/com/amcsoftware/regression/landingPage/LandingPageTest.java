@@ -4,12 +4,4 @@ import com.amcsoftware.setup.TestBase;
 
 public class LandingPageTest extends TestBase {
 
-    public void verifyHeader() {
-
-    }
-
-    public void verifyBannerMessage() {
-
-    }
-
 }
