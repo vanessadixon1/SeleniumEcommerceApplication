@@ -1,6 +1,6 @@
 package com.amcsoftware.smoke.register;
 
-import com.amcsoftware.parameters.init.jsonDataItem.RegisterDataItem;
+import com.amcsoftware.parameters.jsonDataItem.RegisterDataItem;
 import com.amcsoftware.setup.TestBase;
 import org.testng.annotations.Test;
 
@@ -34,6 +34,10 @@ public class RegisterSmokeTest extends TestBase {
         actions.getRegistrationActions().validateRadioButton();
         actions.getRegistrationActions().validateDropdownValues(testData.getOptions());
         actions.softAssert.assertAll();
+    }
+
+    public void verifyRegisterFormButtonWorks() {
+
     }
 
 

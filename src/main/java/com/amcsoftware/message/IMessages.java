@@ -31,4 +31,16 @@ public interface IMessages {
     public String bannerMessage();
 
     public String pageFooterTitle();
+
+    public String expectNoError();
+
+    public String headerNotMatching();
+
+    public String headerNotDisplayed();
+
+    public String signOutBtnNotDisplayed();
+
+    public String forgotLink();
+
+    public String enterNewPassword();
 }

@@ -27,6 +27,8 @@ public class MessagesAndLabels implements IMessages {
     public static String appTitle = "Let's Shop";
     public static String male = "Male";
     public static String female = "Female";
+    public static String is_invalid = "is-invalid";
+    public static String newPasswordEndpoint = "/password-new";
 
     private String firstNameRequired = "*First Name is required";
     private String emailRequired = "*Email is required";
@@ -41,6 +43,12 @@ public class MessagesAndLabels implements IMessages {
     private String phoneErrorMessage = "*Phone Number must be 10 digit";
     private String confirmPasswordErrorMessage = "Password and Confirm Password must match with each other.";
     private String passwordLengthErrorMessage = "Password must be 8 Character Long!";
+    private String expectedNoErrorMessage = "expected no error message";
+    private String headerDoesNotMatch = "The header doesn't match";
+    private String headerNotDisplayed = "Header Not Displayed";
+    private String signOutBtnNotDisplayed = "Sign Out Button is Not Displayed";
+    private String forgotPassword = "Forgot password?";
+    private String enterNewPassword = "Enter New Password";
 
     @Override
     public String firstNameRequiredMessage() {
@@ -115,5 +123,35 @@ public class MessagesAndLabels implements IMessages {
     @Override
     public String pageFooterTitle() {
         return null;
+    }
+
+    @Override
+    public String expectNoError() {
+        return expectedNoErrorMessage;
+    }
+
+    @Override
+    public String headerNotMatching() {
+        return headerDoesNotMatch;
+    }
+
+    @Override
+    public String headerNotDisplayed() {
+        return headerNotDisplayed;
+    }
+
+    @Override
+    public String signOutBtnNotDisplayed() {
+        return signOutBtnNotDisplayed;
+    }
+
+    @Override
+    public String forgotLink() {
+        return forgotPassword;
+    }
+
+    @Override
+    public String enterNewPassword() {
+        return enterNewPassword;
     }
 }

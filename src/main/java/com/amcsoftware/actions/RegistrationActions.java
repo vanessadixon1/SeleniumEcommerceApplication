@@ -1,6 +1,7 @@
 package com.amcsoftware.actions;
 
 import com.amcsoftware.data.RegisterPageObject;
+import com.amcsoftware.data.SharedPageObject;
 import com.amcsoftware.message.MessagesAndLabels;
 import com.amcsoftware.setup.TestNgBase;
 import org.openqa.selenium.NoSuchElementException;
@@ -44,18 +45,18 @@ public class RegistrationActions extends TestNgBase {
                 MessagesAndLabels.phoneNumber, MessagesAndLabels.occupation, MessagesAndLabels.gender, MessagesAndLabels.male,
                 MessagesAndLabels.female, MessagesAndLabels.password, MessagesAndLabels.confirmPassword));
 
-        actions.getSharedActions().validateLabels(fomLabel, RegisterPageObject.registerFormLabels);
+        actions.getSharedActions().validateLabels(fomLabel, SharedPageObject.formLabels);
     }
 
     public void validateRequiredField() {
         engine().findElement(RegisterPageObject.registerFormButton).click();
         WebDriverWait wait = new WebDriverWait(engine(), Duration.ofSeconds(5L));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPageObject.labelRequiredMessages));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SharedPageObject.labelRequiredMessages));
         List<String> requiredMessages = new ArrayList<>(List.of(messagesAndLabels.firstNameRequiredMessage(),
                 messagesAndLabels.emailRequiredMessage(), messagesAndLabels.phoneNumberRequiredMessage(),
                 messagesAndLabels.passwordRequiredMessage(), messagesAndLabels.passwordConfirmRequiredMessage()));
 
-        actions.getSharedActions().validateLabels(requiredMessages, RegisterPageObject.labelRequiredMessages);
+        actions.getSharedActions().validateLabels(requiredMessages, SharedPageObject.labelRequiredMessages);
     }
 
     public void clickRegisterButton() {
