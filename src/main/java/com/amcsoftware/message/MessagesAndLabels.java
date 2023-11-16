@@ -15,7 +15,7 @@ public class MessagesAndLabels implements IMessages {
     public static String passwordInputPlaceholder = "Passsword";
     public static String confirmPasswordInputPlaceholder = "Confirm Passsword";
     public static String register = "Register";
-    public static String successfulOrder = "Successful Orders";
+    public static String successfulOrder = "Successfull Orders";
     public static String customers = "Customers";
     public static String sellers = "Sellers";
     public static String dailyOrders = "Daily Orders";
@@ -24,6 +24,7 @@ public class MessagesAndLabels implements IMessages {
     public static String instagram = "instagram";
     public static String twitter = "twitter";
     public static String youtube = "youtube";
+    public static String envelope = "envelope";
     public static String appTitle = "Let's Shop";
     public static String male = "Male";
     public static String female = "Female";
@@ -49,6 +50,9 @@ public class MessagesAndLabels implements IMessages {
     private String signOutBtnNotDisplayed = "Sign Out Button is Not Displayed";
     private String forgotPassword = "Forgot password?";
     private String enterNewPassword = "Enter New Password";
+    private String registerNowLink = "Don't have an account? Register here";
+    private String registerEndpoint = "/register";
+    private String footerHeader = "Why People Choose Us?";
 
     @Override
     public String firstNameRequiredMessage() {
@@ -153,5 +157,20 @@ public class MessagesAndLabels implements IMessages {
     @Override
     public String enterNewPassword() {
         return enterNewPassword;
+    }
+
+    @Override
+    public String registerLinkText() {
+        return registerNowLink;
+    }
+
+    @Override
+    public String registerEndpoint() {
+        return registerEndpoint;
+    }
+
+    @Override
+    public String footerHeader() {
+        return footerHeader;
     }
 }

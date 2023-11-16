@@ -10,4 +10,5 @@ public class LoginPageObject extends TestNgBase {
     public static By blinkHeader = By.className("blink_me");
     public static By loginButton = By.id("login");
     public static By newPassword = By.cssSelector("div h3[class='card-title text-center']");
+    public static By alreadyHaveAccountLink = By.cssSelector("div[class*='login-wrapper'] p");
 }

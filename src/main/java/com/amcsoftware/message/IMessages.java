@@ -43,4 +43,10 @@ public interface IMessages {
     public String forgotLink();
 
     public String enterNewPassword();
+
+    public String registerLinkText();
+
+    public String registerEndpoint();
+
+    public String footerHeader();
 }

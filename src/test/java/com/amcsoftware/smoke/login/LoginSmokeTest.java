@@ -34,4 +34,10 @@ public class LoginSmokeTest extends TestBase {
         actions.softAssert.assertAll();
     }
 
+    @Test
+    public void verifyRegisterLinkWorks() throws Exception {
+        actions.getLoginActions().validateRegisterLink();
+        actions.softAssert.assertAll();
+    }
+
 }

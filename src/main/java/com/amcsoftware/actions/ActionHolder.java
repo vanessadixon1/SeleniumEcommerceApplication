@@ -7,13 +7,14 @@ public class ActionHolder {
     private RegistrationActions registrationActions;
     public SoftAssert softAssert;
     private LoginActions loginActions;
-
+    private HomepageActions homepageActions;
 
     public ActionHolder() {
         sharedActions = null;
         registrationActions = null;
         softAssert = null;
         loginActions = null;
+        homepageActions = null;
     }
 
     public void Initialize() {
@@ -21,6 +22,7 @@ public class ActionHolder {
         sharedActions = new SharedActions(this);
         registrationActions = new RegistrationActions(this);
         loginActions = new LoginActions(this);
+        homepageActions = new HomepageActions(this);
     }
 
     public SharedActions getSharedActions() {
@@ -33,5 +35,9 @@ public class ActionHolder {
 
     public LoginActions getLoginActions() {
         return loginActions;
+    }
+
+    public HomepageActions getHomepageActions() {
+        return homepageActions;
     }
 }

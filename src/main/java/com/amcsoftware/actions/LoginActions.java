@@ -105,4 +105,19 @@ public class LoginActions extends TestNgBase {
             throw new Exception(e);
         }
     }
+
+    public void validateRegisterLink() throws Exception {
+        try {
+            WebElement registerLink = engine().findElement(LoginPageObject.alreadyHaveAccountLink);
+            actions.softAssert.assertTrue(registerLink.isDisplayed());
+            actions.softAssert.assertEquals(registerLink.getText(), messagesAndLabels.registerLinkText());
+            registerLink.click();
+            String currentUrl = engine().getCurrentUrl();
+            actions.softAssert.assertTrue(currentUrl.contains(messagesAndLabels.registerEndpoint()));
+            WebElement registerHeader = engine().findElement(RegisterPageObject.formTitle);
+            actions.softAssert.assertEquals(registerHeader.getText(), MessagesAndLabels.register);
+        } catch (Exception e) {
+            throw new Exception(e);
+        }
+    }
 }
