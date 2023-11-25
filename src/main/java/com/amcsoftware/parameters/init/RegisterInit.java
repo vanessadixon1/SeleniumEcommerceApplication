@@ -27,7 +27,6 @@ public class RegisterInit {
         try {
             RegisterDataJson parameters = gson.fromJson
                     (new BufferedReader(new InputStreamReader(classLoader.getResourceAsStream(filePath))), RegisterDataJson.class);
-            System.out.println(parameters.toString());
             parameterObjects = parameters.getRegisterData();
         } catch (JsonSyntaxException | JsonIOException e) {
             e.printStackTrace();

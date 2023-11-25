@@ -9,7 +9,6 @@ public class RegisterPageObject extends TestNgBase {
     public static By phoneInput = By.cssSelector("[id='userMobile']");
 
     public static By registerFormButton = By.cssSelector("input[id='login']");
-    public static By registerFormInputs = By.cssSelector("input[placeholder]");
     public static By registerFormRadioButtons = By.cssSelector("input[type = 'radio']");
     public static By registerFormDropdown = By.tagName("select");
 

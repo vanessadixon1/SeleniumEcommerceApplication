@@ -43,7 +43,7 @@ public class LoginActions extends TestNgBase {
 
         actions.getSharedActions().validateLabels(requiredMessages, SharedPageObject.labelRequiredMessages);
 
-        List<WebElement> inputs =  engine().findElements(RegisterPageObject.registerFormInputs);
+        List<WebElement> inputs =  engine().findElements(SharedPageObject.loginAndRegisterFormInputs);
         List<WebElement> errors = engine().findElements(SharedPageObject.labelRequiredMessages);
 
         for(int i = 0; i < inputs.size(); i++) {
@@ -69,7 +69,7 @@ public class LoginActions extends TestNgBase {
     }
 
     public void enterLoginInfo(String username, String password) {
-        List<WebElement> inputs =  engine().findElements(RegisterPageObject.registerFormInputs);
+        List<WebElement> inputs =  engine().findElements(SharedPageObject.loginAndRegisterFormInputs);
         for(WebElement input : inputs) {
            if(input.getAttribute("type").equalsIgnoreCase(MessagesAndLabels.email)) {
                input.sendKeys(username);
@@ -119,5 +119,19 @@ public class LoginActions extends TestNgBase {
         } catch (Exception e) {
             throw new Exception(e);
         }
+    }
+
+    public void login(String username, String password) throws Exception {
+        List<WebElement> inputs = engine().findElements(SharedPageObject.loginAndRegisterFormInputs);
+        for(WebElement input : inputs) {
+            if(input.getAttribute("type").equalsIgnoreCase(MessagesAndLabels.email)) {
+                input.sendKeys(username);
+            }else{
+                input.sendKeys(password);
+            }
+        }
+        clickLoginButton();
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(7L));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LoginPageObject.homepageHeader));
     }
 }

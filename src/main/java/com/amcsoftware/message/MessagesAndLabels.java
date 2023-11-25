@@ -53,6 +53,12 @@ public class MessagesAndLabels implements IMessages {
     private String registerNowLink = "Don't have an account? Register here";
     private String registerEndpoint = "/register";
     private String footerHeader = "Why People Choose Us?";
+    private String inStockMsg = "IN STOCK";
+    private String incorrectTotalMsg = "Total amount is incorrect";
+    private String emptyListMsg = "The list is empty";
+    public String incorrectCartLabelMsg = "The number of items in the cart is incorrect";
+    public String noItemsMsg = "No Products in Your Cart !";
+
 
     @Override
     public String firstNameRequiredMessage() {
@@ -173,4 +179,30 @@ public class MessagesAndLabels implements IMessages {
     public String footerHeader() {
         return footerHeader;
     }
+
+    @Override
+    public String inStock() {
+        return inStockMsg;
+    }
+
+    @Override
+    public String incorrectTotal() {
+        return incorrectTotalMsg;
+    }
+
+    @Override
+    public String emptyList() {
+        return emptyListMsg;
+    }
+
+    @Override
+    public String incorrectCartLabel() {
+        return incorrectTotalMsg;
+    }
+
+    @Override
+    public String noItemsInCart() {
+        return noItemsMsg;
+    }
+
 }

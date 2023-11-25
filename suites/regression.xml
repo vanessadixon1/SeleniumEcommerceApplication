@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression" >
-<!--    <listeners>-->
-<!--        <listener class-name="com.amcsoftware.setup.TestNgBase"></listener>-->
-<!--    </listeners>-->
     <test verbose="2" name="Registration">
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="regression"/>-->
-<!--            </run>-->
-<!--        </groups>-->
         <classes >
-            <class name="com.amcsoftware.regression.claTest"/>
+            <class name="com.amcsoftware.regression.order.Order"/>
         </classes>
     </test>
-<!--    <test verbose="2" name="Noe" >-->
-<!--        <classes >-->
-<!--            <class name="com.amcsoftware.regression.i"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+
 </suite>

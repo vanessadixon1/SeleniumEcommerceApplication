@@ -35,10 +35,4 @@ public class RegisterSmokeTest extends TestBase {
         actions.getRegistrationActions().validateDropdownValues(testData.getOptions());
         actions.softAssert.assertAll();
     }
-
-    public void verifyRegisterFormButtonWorks() {
-
-    }
-
-
 }

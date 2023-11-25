@@ -8,6 +8,7 @@ public class ActionHolder {
     public SoftAssert softAssert;
     private LoginActions loginActions;
     private HomepageActions homepageActions;
+    private OrderActions orderActions;
 
     public ActionHolder() {
         sharedActions = null;
@@ -15,6 +16,7 @@ public class ActionHolder {
         softAssert = null;
         loginActions = null;
         homepageActions = null;
+        orderActions = null;
     }
 
     public void Initialize() {
@@ -23,6 +25,7 @@ public class ActionHolder {
         registrationActions = new RegistrationActions(this);
         loginActions = new LoginActions(this);
         homepageActions = new HomepageActions(this);
+        orderActions = new OrderActions(this);
     }
 
     public SharedActions getSharedActions() {
@@ -39,5 +42,9 @@ public class ActionHolder {
 
     public HomepageActions getHomepageActions() {
         return homepageActions;
+    }
+
+    public OrderActions getOrderActions() {
+        return orderActions;
     }
 }

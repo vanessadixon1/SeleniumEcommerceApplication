@@ -95,7 +95,7 @@ public class RegistrationActions extends TestNgBase {
         List<String> inputValues = new ArrayList<>(List.of(firstName, lastName, email, phoneNumber, password, confirmPassword));
         List<String> placeholders = new ArrayList<>(List.of(MessagesAndLabels.firstName, MessagesAndLabels.lastName, MessagesAndLabels.emailInputPlaceholder, MessagesAndLabels.phoneInputPlaceHolder,
                 MessagesAndLabels.passwordInputPlaceholder, MessagesAndLabels.confirmPasswordInputPlaceholder ));
-        actions.getSharedActions().addAndRemoveInputValues(inputValues, placeholders, RegisterPageObject.registerFormInputs);
+        actions.getSharedActions().addAndRemoveInputValues(inputValues, placeholders, SharedPageObject.loginAndRegisterFormInputs);
     }
 
 }

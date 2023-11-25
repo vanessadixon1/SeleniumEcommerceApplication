@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Smoke">
+    <test verbose="2" name="Smoke">
         <classes >
-            <class name="com.amcsoftware.regression.claTest"/>
+            <class name="com.amcsoftware.smoke.login.LoginSmokeTest"/>
+            <class name="com.amcsoftware.smoke.register.RegisterSmokeTest"/>
+            <class name="com.amcsoftware.smoke.landingPage.LandingPageSmokeTest"/>
         </classes>
     </test>
 </suite>

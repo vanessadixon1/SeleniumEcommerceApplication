@@ -7,11 +7,6 @@ import org.testng.annotations.Test;
 public class LandingPageSmokeTest extends TestBase {
 
     @Test
-    public void verifyHeader() {
-        System.out.println(engine().findElement(By.cssSelector("[class='banner']")).getText());
-    }
-
-    @Test
     public void verifyHeaderIconsExist() throws Exception {
         actions.getHomepageActions().validateHeaderIcons();
         actions.softAssert.assertAll();

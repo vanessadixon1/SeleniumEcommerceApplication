@@ -1,52 +1,62 @@
 package com.amcsoftware.message;
 
-public interface IMessages {
+ interface IMessages {
 
-    public String firstNameRequiredMessage();
+  String firstNameRequiredMessage();
 
-    public String emailRequiredMessage();
+  String emailRequiredMessage();
 
-    public String phoneNumberRequiredMessage();
+  String phoneNumberRequiredMessage();
+    
+  String passwordRequiredMessage();
 
-    public String passwordRequiredMessage();
+  String passwordConfirmRequiredMessage();
 
-    public String passwordConfirmRequiredMessage();
+  String firstNameErrorMessage();
 
-    public String firstNameErrorMessage();
+  String lastNameErrorMessage();
 
-    public String lastNameErrorMessage();
+  String passwordLengthErrorMessage();
 
-    public String passwordLengthErrorMessage();
+  String phoneNumberErrorMessage();
 
-    public String phoneNumberErrorMessage();
+  String onlyNumbersErrorMessage();
 
-    public String onlyNumbersErrorMessage();
+  String confirmPasswordErrorMessage();
 
-    public String confirmPasswordErrorMessage();
+  String emailErrorMessage();
 
-    public String emailErrorMessage();
+  String checkboxErrorMessage();
 
-    public String checkboxErrorMessage();
+  String bannerMessage();
 
-    public String bannerMessage();
+  String pageFooterTitle();
 
-    public String pageFooterTitle();
+  String expectNoError();
 
-    public String expectNoError();
+  String headerNotMatching();
 
-    public String headerNotMatching();
+  String headerNotDisplayed();
 
-    public String headerNotDisplayed();
+  String signOutBtnNotDisplayed();
 
-    public String signOutBtnNotDisplayed();
+  String forgotLink();
 
-    public String forgotLink();
+  String enterNewPassword();
 
-    public String enterNewPassword();
+  String registerLinkText();
 
-    public String registerLinkText();
+  String registerEndpoint();
 
-    public String registerEndpoint();
+  String footerHeader();
 
-    public String footerHeader();
+  String inStock();
+
+  String incorrectTotal();
+    
+  String emptyList();
+
+  String incorrectCartLabel();
+
+  String noItemsInCart();
 }
